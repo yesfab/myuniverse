@@ -1,0 +1,3 @@
+/**
+ * VINYLE ANIMATION
+ */

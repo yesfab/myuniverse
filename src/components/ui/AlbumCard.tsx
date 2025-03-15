@@ -1,0 +1,3 @@
+/**
+ * CARTE POUR AFFICHER UN ALBUM
+ */
