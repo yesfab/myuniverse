@@ -1,7 +1,7 @@
 /* src/styles/global.css */
-@import "tailwindcss/preflight";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Variables globales */
 :root {
@@ -56,13 +56,29 @@ body {
   animation: rotate 6s linear infinite;
 }
 
-/* Utilitaires personnalisés */
-@layer components {
-  .folder-card {
-    @apply cursor-pointer transition-transform hover:scale-105 rounded-lg shadow-md;
-  }
-  
-  .btn-primary {
-    @apply px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors;
-  }
+/* Définition des classes personnalisées sans utiliser @apply */
+.folder-card {
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: 150ms;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.folder-card:hover {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #3B82F6;
+  color: white;
+  border-radius: 0.375rem;
+  transition-property: background-color;
+  transition-duration: 150ms;
+}
+.btn-primary:hover {
+  background-color: #2563EB;
 }
